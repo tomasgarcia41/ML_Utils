@@ -223,6 +223,22 @@ def load_data():
     y = y[0:1000]
     return X, y
 
+import numpy as np
+
+def load_data():
+    data = np.loadtxt("data/ex1data1.txt", delimiter=',')
+    X = data[:,0]
+    y = data[:,1]
+    return X, y
+
+def load_data_multi():
+    data = np.loadtxt("data/ex1data2.txt", delimiter=',')
+    X = data[:,:2]
+    y = data[:,2]
+    return X, y
+
+
+
 def load_weights():
     w1 = np.load("data/w1.npy")
     b1 = np.load("data/b1.npy")
